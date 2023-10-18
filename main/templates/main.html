@@ -33,7 +33,7 @@
 <body>
 
   <div class='conteiner'>
-
+    {% block nav %}
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: rgb(250, 199, 104);" >
         <a><img src="{% static 'media/logoteste.png' %}"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,6 +68,7 @@
             </form> -->
         </div>
       </nav>
+    {% endblock %}
   </div>
     
         <div class="centralizar">
