@@ -11,30 +11,30 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <style>
   .carrossel-item--1 .carrossel-item_image {
-    background-image: "{% static 'media/tarsilao.jpg' %}";
+    background-image:  url("{% static 'media/tarsilao.jpg' %}") ;
   }
 
   .carrossel-item--2 .carrossel-item_image {
-      background-image: "{% static 'media/dumao.jpg' %}";
+      background-image:  url("{% static 'media/dumao.jpg' %}");
   }
 
 
   .carrossel-item--3 .carrossel-item_image {
-      background-image: "{% static 'media/parisao.jpg' %}";
+      background-image:  url("{% static 'media/parisao.jpg' %}");
   }
 
 
   .carrossel-item--4 .carrossel-item_image {
-      background-image: "{% static 'media/revolucinha.jpg' %}";
+      background-image:  url("{% static 'media/revolucinha.jpg' %}");
   }
   </style>
-   
+
 </head>
 <body>
 
   <div class='conteiner'>
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: rgb(250, 199, 104);" >
         <a><img src="{% static 'media/logoteste.png' %}"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -71,7 +71,6 @@
   </div>
     
         <div class="centralizar">
-
           <div class="carrossel">
             <div class="carrossel_nav">
               <div id="moveLeft" class="carrossel_arrow">
@@ -92,9 +91,9 @@
               <div class="carrossel-item_image"></div>
               <div class="carrossel-item_info">
                 <div class="carrossel-item_container">
-                  <h1 class="carrossel-item_titulo">{% block carrosel-titulo1 %}{% endblock %}</h1>
-                  <p class="carrossel-item_description">{% block carrosel-descricao1 %}{% endblock %}</p>
-                  <a href="" class="carrossel-item_btn">Explorar Tuor</a>
+                  <h1 class="carrossel-item_titulo" style="color: rgb(12, 148, 233);">{% block carrosel-titulo1 %}Semana da Arte Moderna{% endblock %}</h1>
+                  <p class="carrossel-item_description">{% block carrosel-descricao1 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
+                  <a class="carrossel-item_btn" href="{% url 'artemoderna' %}">Explorar Tuor</a>
                 </div>
               </div>
             </div>
@@ -103,9 +102,9 @@
               <div class="carrossel-item_image"></div>
               <div class="carrossel-item_info">
                 <div class="carrossel-item_container">
-                  <h1 class="carrossel-item_titulo">{% block carrosel-titulo2 %}{% endblock %}</h1>
-                  <p class="carrossel-item_description">{% block carrosel-descricao2 %}{% endblock %}</p>
-                  <a href="" class="carrossel-item_btn">Explorar Tuor</a>
+                  <h1 class="carrossel-item_titulo" style="color: rgb(17, 17, 17);">{% block carrosel-titulo2 %}Santos Dumont{% endblock %}</h1>
+                  <p class="carrossel-item_description">{% block carrosel-descricao2 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
+                  <a class="carrossel-item_btn" href="{% url 'santosdumont' %}">Explorar Tuor</a>
                 </div>
               </div>
             </div>
@@ -114,9 +113,9 @@
               <div class="carrossel-item_image"></div>
               <div class="carrossel-item_info">
                 <div class="carrossel-item_container">
-                  <h1 class="carrossel-item_titulo">{% block carrosel-titulo3 %}{% endblock %}</h1>
-                  <p class="carrossel-item_description">{% block carrosel-descricao3 %}{% endblock %}</p>
-                  <a href="" class="carrossel-item_btn">Explorar Tuor</a>
+                  <h1 class="carrossel-item_titulo" style="color: rgb(112, 78, 67);">{% block carrosel-titulo3 %}Olimpíadas de 2024{% endblock %}</h1>
+                  <p class="carrossel-item_description">{% block carrosel-descricao3 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
+                  <a class="carrossel-item_btn"  href="{% url 'olimpiadas' %}">Explorar Tuor</a>
                 </div>
               </div>
             </div>
@@ -125,24 +124,28 @@
               <div class="carrossel-item_image"></div>
               <div class="carrossel-item_info">
                 <div class="carrossel-item_container">
-                  <h1 class="carrossel-item_titulo">{% block carrosel-titulo4 %}{% endblock %}</h1>
-                  <p class="carrossel-item_description">{% block carrosel-descricao4 %}{% endblock %}</p>
-                  <a href="" class="carrossel-item_btn">Explorar Tuor</a>
+                  <h1 class="carrossel-item_titulo" style="color: rgb(60, 60, 60);">{% block carrosel-titulo4 %}Revolução Industrial{% endblock %}</h1>
+                  <p class="carrossel-item_description">{% block carrosel-descricao4 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
+                  <a class="carrossel-item_btn" href="{% url 'revolucaoindustrial' %}">Explorar Tuor</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- <hr class="hr"/> -->
     
   <div class="conteiner">
 
     
           
           {% block conteudo %}
-          
+          <div class="sobre">
+            <h1>Sobre Nós</h1>
+            <br>
+          </div>
           {% endblock%}
 
-      <footer class="footer">
+      <footer class="footer sticky-bottom">
         <div>
           <div class="row">
             <div class="col-md-4">
