@@ -1,5 +1,16 @@
 {% extends 'main.html' %}
 	{% block titulo %}Olimpíadas de 2024{% endblock %}
+        {% load static %}
+	{% block titulo %}Arte Moderna{% endblock %}
+        {% block carrosel-titulo1 %}Abaporu{% endblock %}
+        {% block carrosel-titulo2 %}Operários{% endblock %}
+        {% block carrosel-titulo3 %}Amigos{% endblock %}
+        {% block carrosel-titulo4 %}O Homem amarelo{% endblock %}
+        {% block img1 %} {% static 'media/artemoderna/tarsilao.jpg' %} {% endblock %}
+        {% block img2 %} {% static 'media/artemoderna/operarios.jpg' %} {% endblock %}
+        {% block img3 %} {% static 'media/artemoderna/amigos.jpg' %} {% endblock %}
+        {% block img4 %} {% static 'media/artemoderna/o_homem_amarelo.jpeg' %} {% endblock %}
+        {% block sobre %}{% endblock %}
   {% block conteudo %}
           <h3>Olimpiada de 2024</h3>
           <br><br>

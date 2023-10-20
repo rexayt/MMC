@@ -1,10 +1,19 @@
 {% extends 'main.html' %}
-		{% block titulo %}Santos Dumont{% endblock %}
-
-          {% block conteudo %}
+{% load static %}
+	{% block titulo %}Santos Dumont{% endblock %}
+     {% block carrosel-titulo1 %}Balão à gás de pequeno porte{% endblock %}
+     {% block carrosel-titulo2 %}Dirigivel{% endblock %}
+     {% block carrosel-titulo3 %}Avião{% endblock %}
+     {% block carrosel-titulo4 %}Chuveiro de água quente{% endblock %}
+     {% block img1 %} {% static 'media/santosdumont/balao.jpg' %} {% endblock %}
+     {% block img2 %} {% static 'media/santosdumont/dirigivel.jpg' %} {% endblock %}
+     {% block img3 %} {% static 'media/santosdumont/aviao.jpg' %} {% endblock %}
+     {% block img4 %} {% static 'media/santosdumont/chuveiro.jpg' %} {% endblock %}
+     {% block conteudo %}
 
           <h3>Santos Dummont</h3>
           <br><br>
 
           
-          {% endblock%}
+     {% endblock%}
+     {% block sobre %}{% endblock %}
