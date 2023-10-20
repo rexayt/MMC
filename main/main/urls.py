@@ -21,4 +21,5 @@ from obras.views import main, artemoderna
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('museu/', include('obras.urls')),
+    path('', include('django.contrib.auth.urls'))
 ]

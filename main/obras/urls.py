@@ -7,5 +7,5 @@ urlpatterns = [
     path('arteModerna', artemoderna, name='artemoderna'),
     path('olimpiada', olimpiada, name='olimpiadas'),
     path('revindustrial',revIndustrial,name='revolucaoindustrial'),
-    path('santosdumont',santosDumont, name='santosdumont')
+    path('santosdumont',santosDumont, name='santosdumont'),
 ]
