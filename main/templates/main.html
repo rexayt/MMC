@@ -71,99 +71,121 @@
     {% endblock %}
   </div>
     
-        <div class="centralizar">
-          <div class="carrossel">
-            <div class="carrossel_nav">
-              <div id="moveLeft" class="carrossel_arrow">
-                <span class="material-symbols-outlined carrossel_icon">
-                  arrow_back_ios
-                </span>
-              </div>
-      
-              <span id="moveRight" class="carrossel_arrow">
-                <span class="material-symbols-outlined carrossel_icon">
-                    arrow_forward_ios
-                </span>
-              </span>
-            </div>
-      
-          
-            <div class="carrossel-item carrossel-item--1">
-              <div class="carrossel-item_image"></div>
-              <div class="carrossel-item_info">
-                <div class="carrossel-item_container">
-                  <h1 class="carrossel-item_titulo" style="color: rgb(12, 148, 233);">{% block carrosel-titulo1 %}Semana da Arte Moderna{% endblock %}</h1>
-                  <p class="carrossel-item_description">{% block carrosel-descricao1 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
-                  <a class="carrossel-item_btn" href="{% url 'artemoderna' %}">Explorar Tuor</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="carrossel-item carrossel-item--2">
-              <div class="carrossel-item_image"></div>
-              <div class="carrossel-item_info">
-                <div class="carrossel-item_container">
-                  <h1 class="carrossel-item_titulo" style="color: rgb(17, 17, 17);">{% block carrosel-titulo2 %}Santos Dumont{% endblock %}</h1>
-                  <p class="carrossel-item_description">{% block carrosel-descricao2 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
-                  <a class="carrossel-item_btn" href="{% url 'santosdumont' %}">Explorar Tuor</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="carrossel-item carrossel-item--3">
-              <div class="carrossel-item_image"></div>
-              <div class="carrossel-item_info">
-                <div class="carrossel-item_container">
-                  <h1 class="carrossel-item_titulo" style="color: rgb(112, 78, 67);">{% block carrosel-titulo3 %}Olimpíadas de 2024{% endblock %}</h1>
-                  <p class="carrossel-item_description">{% block carrosel-descricao3 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
-                  <a class="carrossel-item_btn"  href="{% url 'olimpiadas' %}">Explorar Tuor</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="carrossel-item carrossel-item--4">
-              <div class="carrossel-item_image"></div>
-              <div class="carrossel-item_info">
-                <div class="carrossel-item_container">
-                  <h1 class="carrossel-item_titulo" style="color: rgb(60, 60, 60);">{% block carrosel-titulo4 %}Revolução Industrial{% endblock %}</h1>
-                  <p class="carrossel-item_description">{% block carrosel-descricao4 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
-                  <a class="carrossel-item_btn" href="{% url 'revolucaoindustrial' %}">Explorar Tuor</a>
-                </div>
-              </div>
-            </div>
-          </div>
+  <div class="centralizar">
+    <div class="carrossel">
+      <div class="carrossel_nav">
+        <div id="moveLeft" class="carrossel_arrow">
+          <span class="material-symbols-outlined carrossel_icon">
+            arrow_back_ios
+          </span>
         </div>
-        <!-- <hr class="hr"/> -->
+
+        <span id="moveRight" class="carrossel_arrow">
+          <span class="material-symbols-outlined carrossel_icon">
+              arrow_forward_ios
+          </span>
+        </span>
+      </div>
+
     
-  <div class="conteiner">
-      <footer class="footer sticky-bottom">
-        <div>
-          <div class="row">
-            <div class="col-md-4">
-              <h4>Contato</h4>
-              <p class="bi bi-geo-alt">Rua tal tal, 123</p>
-              <p class="bi bi-telephone">(11)4002-8922</p>
-              <p class="bi bi-envelope-at">info@museudomeuwebsite.com</p>
-            </div>
-            <div class="col-md-4">
-              <h4><span class="bi bi-calendar"></span>Horário de Funcionamento<span class="bi bi-calendar"><span></h4>
-              <p>Segunda a Sexta: 9h às 17h</p>
-              <p>Sábado e Domingo: 10h às 18h</p>
-              <p>Fechado nos feriados</p>
-            </div>
-            <div class="col-md-4">
-              <h4>Redes Sociais</h4>
-              <ul class="list-unstyled">
-                <li><a href=""><i class="bi bi-facebook"></i> Facebook</a></li>
-                <li><a href=""><i class="bi bi-twitter"></i> Twitter</a></li>
-                <li><a href=""><i class="bi bi-instagram"></i> Instagram</a></li>
-              </ul>
-            </div>
+      <div class="carrossel-item carrossel-item--1">
+        <div class="carrossel-item_image"></div>
+        <div class="carrossel-item_info">
+          <div class="carrossel-item_container">
+            <h1 class="carrossel-item_titulo" style="color: rgb(12, 148, 233);">{% block carrosel-titulo1 %}Semana da Arte Moderna{% endblock %}</h1>
+            <p class="carrossel-item_description">{% block carrosel-descricao1 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
+            <a class="carrossel-item_btn" href="{% url 'artemoderna' %}">Explorar Tuor</a>
           </div>
         </div>
-        <p><strong>Desenvolvido por: Felipe, Henri, Luiz, Thierry.</strong></p>
-        <p><strong>Copyright © 2023 MMC - Museu das Multiartes Conjuntas. Todos os direitos reservados.</strong></p>
-      </footer>
+      </div>
+
+      <div class="carrossel-item carrossel-item--2">
+        <div class="carrossel-item_image"></div>
+        <div class="carrossel-item_info">
+          <div class="carrossel-item_container">
+            <h1 class="carrossel-item_titulo" style="color: rgb(17, 17, 17);">{% block carrosel-titulo2 %}Santos Dumont{% endblock %}</h1>
+            <p class="carrossel-item_description">{% block carrosel-descricao2 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
+            <a class="carrossel-item_btn" href="{% url 'santosdumont' %}">Explorar Tuor</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carrossel-item carrossel-item--3">
+        <div class="carrossel-item_image"></div>
+        <div class="carrossel-item_info">
+          <div class="carrossel-item_container">
+            <h1 class="carrossel-item_titulo" style="color: rgb(112, 78, 67);">{% block carrosel-titulo3 %}Olimpíadas de 2024{% endblock %}</h1>
+            <p class="carrossel-item_description">{% block carrosel-descricao3 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
+            <a class="carrossel-item_btn"  href="{% url 'olimpiadas' %}">Explorar Tuor</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carrossel-item carrossel-item--4">
+        <div class="carrossel-item_image"></div>
+        <div class="carrossel-item_info">
+          <div class="carrossel-item_container">
+            <h1 class="carrossel-item_titulo" style="color: rgb(60, 60, 60);">{% block carrosel-titulo4 %}Revolução Industrial{% endblock %}</h1>
+            <p class="carrossel-item_description">{% block carrosel-descricao4 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
+            <a class="carrossel-item_btn" href="{% url 'revolucaoindustrial' %}">Explorar Tuor</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <hr class="hr"/> -->
+  
+  <div class="conteudo">
+    <div class="sobre" style="margin-bottom: 50px;">
+      <h1 style="color: rgb(71, 0, 0);">Sobre</h1>
+      <!-- queria colocar uma linha para dividir o titulo do texto para ficar bonitin tipo essa linha de baixo-->
+      <hr class="hr"/>
+      <div>
+        <p>Vestibulum vulputate lorem vitae mi faucibus, non sollicitudin eros feugiat. Nam scelerisque, magna a vestibulum auctor, quam turpis pulvinar augue, sit amet eleifend justo tellus non elit. Morbi a tortor scelerisque ante sodales commodo. Morbi leo est, viverra vitae tempus ac, vestibulum quis sapien. Nunc eleifend diam nec diam vulputate volutpat. Duis tempus odio non eros mollis, id vulputate justo facilisis. Vivamus ornare risus non velit condimentum ultrices. Aliquam metus dui, commodo eu augue a, accumsan efficitur sem. Aenean a semper ligula. Curabitur nec venenatis dolor. Fusce et tincidunt sapien, id tempus purus. Cras rutrum ante nulla, et convallis erat varius sit amet. Pellentesque at quam ligula. Vestibulum suscipit nunc id odio aliquam, consequat iaculis felis euismod. Mauris vulputate tellus arcu, non consequat lacus tincidunt ac.</p>
+      </div>
+    </div>
+
+    <div class="Um Outro TOPICO do museu">
+      <h1 style="color: rgb(71, 0, 0);">Um Outro TOPICO do museu</h1>
+      <hr class="hr"/>
+      <div>
+        <p>Vestibulum vulputate lorem vitae mi faucibus, non sollicitudin eros feugiat. Nam scelerisque, magna a vestibulum auctor, quam turpis pulvinar augue, sit amet eleifend justo tellus non elit. Morbi a tortor scelerisque ante sodales commodo. Morbi leo est, viverra vitae tempus ac, vestibulum quis sapien. Nunc eleifend diam nec diam vulputate volutpat. Duis tempus odio non eros mollis, id vulputate justo facilisis. Vivamus ornare risus non velit condimentum ultrices. Aliquam metus dui, commodo eu augue a, accumsan efficitur sem. Aenean a semper ligula. Curabitur nec venenatis dolor. Fusce et tincidunt sapien, id tempus purus. Cras rutrum ante nulla, et convallis erat varius sit amet. Pellentesque at quam ligula. Vestibulum suscipit nunc id odio aliquam, consequat iaculis felis euismod. Mauris vulputate tellus arcu, non consequat lacus tincidunt ac.</p>
+      </div>
+    </div>
+  </div>
+  <div class="conteiner">
+    <!-- <div class="sobre">
+      <h1>Sobre</h1>
+    </div> -->
+    
+    <footer class="footer sticky-bottom">
+      <div>
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Contato</h4>
+            <p class="bi bi-geo-alt">Rua tal tal, 123</p>
+            <p class="bi bi-telephone">(11)4002-8922</p>
+            <p class="bi bi-envelope-at">info@museudomeuwebsite.com</p>
+          </div>
+          <div class="col-md-4">
+            <h4><span class="bi bi-calendar"></span>Horário de Funcionamento<span class="bi bi-calendar"><span></h4>
+            <p>Segunda a Sexta: 9h às 17h</p>
+            <p>Sábado e Domingo: 10h às 18h</p>
+            <p>Fechado nos feriados</p>
+          </div>
+          <div class="col-md-4">
+            <h4>Redes Sociais</h4>
+            <ul class="list-unstyled">
+              <li><a href=""><i class="bi bi-facebook"></i> Facebook</a></li>
+              <li><a href=""><i class="bi bi-twitter"></i> Twitter</a></li>
+              <li><a href=""><i class="bi bi-instagram"></i> Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p><strong>Desenvolvido por: Felipe, Henri, Luiz, Thierry.</strong></p>
+      <p><strong>Copyright © 2023 MMC - Museu das Multiartes Conjuntas. Todos os direitos reservados.</strong></p>
+    </footer>
         
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

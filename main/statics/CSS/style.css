@@ -102,6 +102,16 @@ body {
     padding-top: 0px !important;
 }
 
+.conteudo{
+    width: 70%;
+    margin-left: 16%;
+}
+
+.conteudo p{
+    color: white; 
+    text-align-last: center;
+}
+
 /* estilização da nav bar */
 /* .nav-item {
     border-bottom: 2px solid #ffffff00;
