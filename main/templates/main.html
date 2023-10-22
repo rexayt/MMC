@@ -29,106 +29,100 @@
 
 </head>
 <body>
-    {% block nav %}
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: rgb(250, 199, 104);" >
-        <a><img src="{% static 'media/logoteste.png' %}"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto" >
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'main' %}">Inicio <span class="sr-only">(current)</span> </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Atrações
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'artemoderna' %}">Arte Moderna</a>
-                <a class="dropdown-item" href="{% url 'santosdumont' %}">Santos Dumont</a>
-                <a class="dropdown-item" href="{% url 'olimpiadas' %}">Olimpiadas 2024</a>
-                <a class="dropdown-item" href="{% url 'revolucaoindustrial' %}">Revolução Industrial</a>
-              </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Sobre nós</a>
-            </li>
-          </ul>
+  {% block nav %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: rgb(250, 199, 104);" >
+      <a><img src="{% static 'media/logoteste.png' %}"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto" >
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'main' %}">Inicio <span class="sr-only">(current)</span> </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Atrações
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'artemoderna' %}">Arte Moderna</a>
+              <a class="dropdown-item" href="{% url 'santosdumont' %}">Santos Dumont</a>
+              <a class="dropdown-item" href="{% url 'olimpiadas' %}">Olimpiadas 2024</a>
+              <a class="dropdown-item" href="{% url 'revolucaoindustrial' %}">Revolução Industrial</a>
+            </div>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Sobre nós</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  {% endblock %}
+
+  {% block subtitulo %}<h1 class="subtitulo"></h1>{% endblock %}
+  <div class="centralizar">
+    <div class="carrossel">
+      <div class="carrossel_nav">
+        <div id="moveLeft" class="carrossel_arrow">
+          <span class="material-symbols-outlined carrossel_icon" style="color: white;">
+            arrow_back_ios
+          </span>
         </div>
-      </nav>
-    {% endblock %}
 
-        <div class="centralizar">
-          <div class="carrossel">
-            <div class="carrossel_nav">
-              <div id="moveLeft" class="carrossel_arrow">
-                <span class="material-symbols-outlined carrossel_icon">
-                  arrow_back_ios
-                </span>
-              </div>
-      
-              <span id="moveRight" class="carrossel_arrow">
-                <span class="material-symbols-outlined carrossel_icon">
-                    arrow_forward_ios
-                </span>
-              </span>
-            </div>
-      
-          
-            <div class="carrossel-item carrossel-item--1">
-              <div class="carrossel-item_image"></div>
-              <div class="carrossel-item_info">
-                <div class="carrossel-item_container">
-                  <h1 class="carrossel-item_titulo" style="color: rgb(12, 148, 233);">{% block carrosel-titulo1 %}Semana da Arte Moderna{% endblock %}</h1>
-                  <p class="carrossel-item_description">{% block carrosel-descricao1 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
-                  <a class="carrossel-item_btn" href="{% url 'artemoderna' %}">Explorar Tuor</a>
-                </div>
-              </div>
-            </div>
+        <span id="moveRight" class="carrossel_arrow">
+          <span class="material-symbols-outlined carrossel_icon" style="color: white;">
+              arrow_forward_ios
+          </span>
+        </span>
+      </div>
 
-            <div class="carrossel-item carrossel-item--2">
-              <div class="carrossel-item_image"></div>
-              <div class="carrossel-item_info">
-                <div class="carrossel-item_container">
-                  <h1 class="carrossel-item_titulo" style="color: rgb(17, 17, 17);">{% block carrosel-titulo2 %}Santos Dumont{% endblock %}</h1>
-                  <p class="carrossel-item_description">{% block carrosel-descricao2 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
-                  <a class="carrossel-item_btn" href="{% url 'santosdumont' %}">Explorar Tuor</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="carrossel-item carrossel-item--3">
-              <div class="carrossel-item_image"></div>
-              <div class="carrossel-item_info">
-                <div class="carrossel-item_container">
-                  <h1 class="carrossel-item_titulo" style="color: rgb(112, 78, 67);">{% block carrosel-titulo3 %}Olimpíadas de 2024{% endblock %}</h1>
-                  <p class="carrossel-item_description">{% block carrosel-descricao3 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
-                  <a class="carrossel-item_btn"  href="{% url 'olimpiadas' %}">Explorar Tuor</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="carrossel-item carrossel-item--4">
-              <div class="carrossel-item_image"></div>
-              <div class="carrossel-item_info">
-                <div class="carrossel-item_container">
-                  <h1 class="carrossel-item_titulo" style="color: rgb(60, 60, 60);">{% block carrosel-titulo4 %}Revolução Industrial{% endblock %}</h1>
-                  <p class="carrossel-item_description">{% block carrosel-descricao4 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
-                  <a class="carrossel-item_btn" href="{% url 'revolucaoindustrial' %}">Explorar Tuor</a>
-                </div>
-              </div>
-            </div>
+      <div class="carrossel-item carrossel-item--1">
+        <div class="carrossel-item_image"></div>
+        <div class="carrossel-item_info">
+          <div class="carrossel-item_container">
+            <h1 class="carrossel-item_titulo" style="color: rgb(12, 148, 233); font-size: 2vw;">{% block carrosel-titulo1 %}Semana da Arte Moderna{% endblock %}</h1>
+            <p class="carrossel-item_description" style="font-size: 1.2vw;">{% block carrosel-descricao1 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
+            <a class="carrossel-item_btn" href="{% url 'artemoderna' %}">Explorar Tuor</a>
           </div>
+        </div>
+      </div>
 
+      <div class="carrossel-item carrossel-item--2">
+        <div class="carrossel-item_image"></div>
+        <div class="carrossel-item_info">
+          <div class="carrossel-item_container">
+            <h1 class="carrossel-item_titulo" style="color: rgb(17, 17, 17); font-size: 2vw;">{% block carrosel-titulo2 %}Santos Dumont{% endblock %}</h1>
+            <p class="carrossel-item_description" style="font-size: 1.2vw;">{% block carrosel-descricao2 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
+            <a class="carrossel-item_btn" href="{% url 'santosdumont' %}">Explorar Tuor</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carrossel-item carrossel-item--3">
+        <div class="carrossel-item_image"></div>
+        <div class="carrossel-item_info">
+          <div class="carrossel-item_container">
+            <h1 class="carrossel-item_titulo" style="color: rgb(112, 78, 67); font-size: 2vw;">{% block carrosel-titulo3 %}Olimpíadas de 2024{% endblock %}</h1>
+            <p class="carrossel-item_description" style="font-size: 1.2vw;">{% block carrosel-descricao3 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
+            <a class="carrossel-item_btn"  href="{% url 'olimpiadas' %}">Explorar Tuor</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carrossel-item carrossel-item--4">
+        <div class="carrossel-item_image"></div>
+        <div class="carrossel-item_info">
+          <div class="carrossel-item_container">
+            <h1 class="carrossel-item_titulo" style="color: rgb(60, 60, 60); font-size: 2vw;">{% block carrosel-titulo4 %}Revolução Industrial{% endblock %}</h1>
+            <p class="carrossel-item_description" style="font-size: 1.2vw;">{% block carrosel-descricao4 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
+            <a class="carrossel-item_btn" href="{% url 'revolucaoindustrial' %}">Explorar Tuor</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-    <span id="moveRight" class="carrossel_arrow">
-      <span class="material-symbols-outlined carrossel_icon">
-        arrow_forward_ios
-      </span>
-    </span>
-  </div>
+
   {% block sobre %}
   <div class="conteudo">
     <div class="sobre" style="margin-bottom: 50px;">

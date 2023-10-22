@@ -56,7 +56,7 @@
 }
 
 #obra{
-    margin-top: 100px;
+    margin-top: 0px;
     margin-bottom: 50px;
     border: 0.5px solid;
     border-color: rgb(84, 84, 84);
@@ -88,7 +88,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 89%;
+    height: 100vh;
     max-height: 900px;
 }
 
@@ -108,6 +108,12 @@ body {
 
 .conteudo p{
     color: white; 
+    text-align-last: center;
+}
+
+.subtitulo{
+    margin-bottom: 40px;
+    margin-top: 40px;
     text-align-last: center;
 }
 
@@ -208,7 +214,7 @@ body {
 .carrossel-item_titulo {
     margin: 15px 0 0 0;
     font-family: 'Playfair Display', serif;
-    font-size: 44px;
+    font-size: 2vw !important;
     line-height: 45px;
     letter-spacing: 3px;
     font-weight: 700;
@@ -226,7 +232,7 @@ body {
     transition: 0.6s all ease-in-out;
     margin-top: 35px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 1.2vw;
     color: #343434;
     line-height: 30px;
     margin-bottom: 35px;
@@ -262,7 +268,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     width: 16px;
-    color: #512438;
+    color: #ffffff;
 }
 
 .carrossel_arrow {
@@ -270,6 +276,8 @@ body {
     display: inline-block;
     padding: 11px 20px;
     position: relative;
+    background: #ffffff;
+
 }
 
 .carrossel_arrow:nth-child(1):after {
@@ -277,7 +285,7 @@ body {
     right: -3px;
     position: absolute;
     width: 1px;
-    background-color: #b0b0b0;
+    background-color: #ffffff;
     height: 14px;
     top: 50%;
     margin-top: -7px;
@@ -306,7 +314,7 @@ body {
 }
 
 .carrossel_arrow {
-    background: #2b2b2a00;
+    background: #ffffff;
 }
 
 /* fim da estilização do carrossel  */
