@@ -280,7 +280,7 @@ body {
     display: inline-block;
     padding: 11px 20px;
     position: relative;
-    background: #ffffff;
+    background: #ffffff00;
 
 }
 
@@ -318,7 +318,7 @@ body {
 }
 
 .carrossel_arrow {
-    background: #ffffff;
+    background: #ffffff00;
 }
 
 /* fim da estilização do carrossel  */
