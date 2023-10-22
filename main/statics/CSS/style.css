@@ -55,8 +55,8 @@
 
 }
 
-#obra{
-    margin-top: 0px;
+.obra{
+    margin-top: 100px;
     margin-bottom: 50px;
     border: 0.5px solid;
     border-color: rgb(84, 84, 84);
@@ -71,10 +71,14 @@
 
 #textoObra #texto{
     margin: 10px;
-    width: 560px;
+    width: 570px;
     height: 320px;
     resize: none;
     border: none;
+}
+
+.resumo{
+    
 }
 
 

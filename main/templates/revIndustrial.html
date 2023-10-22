@@ -2,17 +2,43 @@
 {% load static %}
 {% block titulo %}Revolução Industrial{% endblock %}
 {% block subtitulo %}<h1 class="subtitulo">Revolução Industrial</h1>{% endblock %}
+{% block carrosel-titulo1 %}<span style="color: rgb(122, 58, 15);">Revolução Industrial</span>{% endblock %}
+{% block carrosel-titulo2 %}Maquinas à Vapor{% endblock %}
+{% block carrosel-titulo3 %}<span style="color: rgb(125, 138, 115);">Maquinas à Combustão</span>{% endblock %}
+{% block carrosel-titulo4 %}<span style="color: rgb(33, 33, 202);">Avanço Tecnológico e Ciêntifico</span>{% endblock %}
+{% block img1 %} {% static 'media/revIndustrial/revIndustrial.png' %} {% endblock %}
+{% block img2 %} {% static 'media/revIndustrial/tremCarrossel.png' %} {% endblock %}
+{% block img3 %} {% static 'media/revIndustrial/petroleo.jpeg' %} {% endblock %}
+{% block img4 %} {% static 'media/revIndustrial/tecnologico.jpeg' %} {% endblock %}
+  {% block sobre %}
   <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
 
-          {% block sobre %}
-        <a name="obra1">
-          <div class="col-12" id="obra">
-            <div class="col-6" id="imagens" style="float: left;">
-              <img src="https://avatars.mds.yandex.net/i?id=2a00000179f5b6e1bdb98bfb3d1c20b7ab95-3844047-images-thumbs&n=13">
-            </div>
+  <section class="resumo" style="text-align-last: center; width: 70%;margin: auto;">
+    <h4>
+    A Revolução Industrial teve início no século XVIII, com a introdução da máquina de vapor e o desenvol
+    vem do avanço tecnológico que permitiu a produção em massa de bens e serviços. Com isso,
+    diminuiu-se a necessidade de mão-de-obra humana nas indústrias, tornando-as mais
+    eficientes e rentáveis. Além disso, as fábricas se multiplicaram, criando um ambiente
+    industrial que transformou a sociedade e a economia.
+    </h4>
+  </section>
+  
+  <div class="obra" style="margin-top: 100px;
+  margin-bottom: 50px;
+  border: 0.5px solid;
+  border-color: rgb(255, 255, 255);
+  display: inline-block;
+  margin-left: 19%;">
+      <div class="col-6" id="imagens" style="float: left;background-color: transparent;
+                                            width: 500px;
+                                            height: 300px;
+                                            margin: 30px;
+                                        ">
+        <img src="{% static 'media/revIndustrial/1fase_trem.jpg' %}" style="margin: auto; display: block; margin-top: 12%; height: 60%;">
+      </div>
 
-            <div class="col-6" id="textoObra" style="float: left;">
-              <textarea id="texto" disabled="true">
+      <div class="col-6" id="textoObra" style="float: left;">
+        <textarea id="texto" disabled="true" style="background-color: transparent; margin: 10px; width: 560px; height: 320px;resize: none; border: none; color: white;">
 Suspendisse vestibulum neque arcu, ac pretium orci convallis eget. Mauris aliquet ipsum in ante varius imperdiet. Cras vitae urna in velit euismod posuere. Duis pellentesque ante vel turpis ultricies aliquam. Vestibulum aliquet dignissim tellus, quis dignissim mi molestie ac. Fusce efficitur bibendum enim vitae malesuada. In hac habitasse platea dictumst. Nunc imperdiet scelerisque erat in vulputate. Vivamus feugiat ex id leo rhoncus, eget scelerisque est elementum. Praesent eget sem in purus pharetra condimentum ut non orci.
 
 Integer eu viverra tortor, sit amet dapibus nisl. Vivamus congue ac nisl sit amet vestibulum. Phasellus laoreet vehicula cursus. Sed sagittis est eget interdum rutrum. Etiam ac vehicula nibh. Nulla consequat justo eu erat varius tempor. Nullam enim est, varius sed neque nec, aliquet dictum leo. Sed finibus enim quis elit venenatis dictum. Donec feugiat eget lorem aliquet pulvinar. Donec rhoncus ante quis neque tincidunt lobortis. Nam sit amet gravida est. Donec turpis metus, bibendum et massa sed, lobortis facilisis risus. Praesent placerat fringilla erat et mattis. Vivamus et tincidunt nibh.
@@ -22,21 +48,27 @@ Nullam pretium vel lorem at ultrices. Vivamus mi sem, tristique sed elit non, he
 Praesent volutpat euismod augue, sodales mollis felis. Nulla aliquam purus id nisl molestie, vel eleifend libero porta. Integer gravida leo eu convallis congue. Curabitur neque ex, mollis vel porttitor condimentum, mollis non lacus. Donec est mi, rhoncus vel porttitor dapibus, gravida id ex. Vestibulum vitae tempor eros, eget tempor velit. Phasellus venenatis ex ac eros iaculis viverra. Quisque venenatis consectetur quam ut mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
 Duis non eros non purus faucibus finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus purus dolor, pharetra ac tellus nec, accumsan blandit sem. Mauris luctus sed magna at malesuada. Vivamus ut sem sed massa pulvinar ultricies. Morbi vulputate eu massa non aliquet. Vivamus scelerisque condimentum tortor sed vestibulum. Sed pretium lectus ut commodo finibus. Nunc viverra dictum nulla, et ornare enim dapibus sed.
-              </textarea>
-            </div>
-          </div>
-        </a>
+        </textarea>
+      </div>
+    </a>
+  </div>
 
+  <div class="obra" style="margin-top: 100px;
+  margin-bottom: 50px;
+  border: 0.5px solid;
+  border-color: rgb(255, 255, 255);
+  display: inline-block;
+  margin-left: 19%;">
+      <div class="col-6" id="imagens" style="float: left;background-color: transparent;
+                                            width: 500px;
+                                            height: 300px;
+                                            margin: 30px;
+                                        ">
+        <img src="{% static 'media/revIndustrial/petroleo.jpeg' %}" style="margin-left: 5%; display: block; height: 100%;">
+      </div>
 
-        <a name="obra2">
-          <div class="col-12" id="obra">
-            <div class="col-6" id="imagens" style="float: left;">
-              
-              <img src="https://avatars.mds.yandex.net/i?id=78b08d329a756ee48125288c860a082e839d58d3-10415001-images-thumbs&n=13">
-            </div>
-
-            <div class="col-6" id="textoObra" style="float: left;">
-              <textarea id="texto" disabled="true">
+      <div class="col-6" id="textoObra" style="float: left;">
+        <textarea id="texto" disabled="true" style="background-color: transparent; margin: 10px; width: 560px; height: 320px;resize: none; border: none; color: white;">
 Suspendisse vestibulum neque arcu, ac pretium orci convallis eget. Mauris aliquet ipsum in ante varius imperdiet. Cras vitae urna in velit euismod posuere. Duis pellentesque ante vel turpis ultricies aliquam. Vestibulum aliquet dignissim tellus, quis dignissim mi molestie ac. Fusce efficitur bibendum enim vitae malesuada. In hac habitasse platea dictumst. Nunc imperdiet scelerisque erat in vulputate. Vivamus feugiat ex id leo rhoncus, eget scelerisque est elementum. Praesent eget sem in purus pharetra condimentum ut non orci.
 
 Integer eu viverra tortor, sit amet dapibus nisl. Vivamus congue ac nisl sit amet vestibulum. Phasellus laoreet vehicula cursus. Sed sagittis est eget interdum rutrum. Etiam ac vehicula nibh. Nulla consequat justo eu erat varius tempor. Nullam enim est, varius sed neque nec, aliquet dictum leo. Sed finibus enim quis elit venenatis dictum. Donec feugiat eget lorem aliquet pulvinar. Donec rhoncus ante quis neque tincidunt lobortis. Nam sit amet gravida est. Donec turpis metus, bibendum et massa sed, lobortis facilisis risus. Praesent placerat fringilla erat et mattis. Vivamus et tincidunt nibh.
@@ -46,20 +78,27 @@ Nullam pretium vel lorem at ultrices. Vivamus mi sem, tristique sed elit non, he
 Praesent volutpat euismod augue, sodales mollis felis. Nulla aliquam purus id nisl molestie, vel eleifend libero porta. Integer gravida leo eu convallis congue. Curabitur neque ex, mollis vel porttitor condimentum, mollis non lacus. Donec est mi, rhoncus vel porttitor dapibus, gravida id ex. Vestibulum vitae tempor eros, eget tempor velit. Phasellus venenatis ex ac eros iaculis viverra. Quisque venenatis consectetur quam ut mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
 Duis non eros non purus faucibus finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus purus dolor, pharetra ac tellus nec, accumsan blandit sem. Mauris luctus sed magna at malesuada. Vivamus ut sem sed massa pulvinar ultricies. Morbi vulputate eu massa non aliquet. Vivamus scelerisque condimentum tortor sed vestibulum. Sed pretium lectus ut commodo finibus. Nunc viverra dictum nulla, et ornare enim dapibus sed.
-              </textarea>
-            </div>
-          </div>
-        </a>
+        </textarea>
+      </div>
+    </a>
+  </div>
 
+  <div class="obra" style="margin-top: 100px;
+  margin-bottom: 50px;
+  border: 0.5px solid;
+  border-color: rgb(255, 255, 255);
+  display: inline-block;
+  margin-left: 19%;">
+      <div class="col-6" id="imagens" style="float: left;background-color: transparent;
+                                            width: 500px;
+                                            height: 300px;
+                                            margin: 30px;
+                                        ">
+        <img src="{% static 'media/revIndustrial/tecnologico.jpeg' %}" style="margin-left: 5%; display: block; height: 100%;">
+      </div>
 
-        <a name="obra3">
-          <div class="col-12" id="obra">
-            <div class="col-6" id="imagens" style="float: left;">
-              <img src="https://avatars.mds.yandex.net/i?id=2a0000018b0fd6401fbc69c0a23b7d3c0ee0-934138-fast-images&n=13">
-            </div>
-
-            <div class="col-6" id="textoObra" style="float: left;">
-              <textarea id="texto" disabled="true">
+      <div class="col-6" id="textoObra" style="float: left;">
+        <textarea id="texto" disabled="true" style="background-color: transparent; margin: 10px; width: 560px; height: 320px;resize: none; border: none; color: white;">
 Suspendisse vestibulum neque arcu, ac pretium orci convallis eget. Mauris aliquet ipsum in ante varius imperdiet. Cras vitae urna in velit euismod posuere. Duis pellentesque ante vel turpis ultricies aliquam. Vestibulum aliquet dignissim tellus, quis dignissim mi molestie ac. Fusce efficitur bibendum enim vitae malesuada. In hac habitasse platea dictumst. Nunc imperdiet scelerisque erat in vulputate. Vivamus feugiat ex id leo rhoncus, eget scelerisque est elementum. Praesent eget sem in purus pharetra condimentum ut non orci.
 
 Integer eu viverra tortor, sit amet dapibus nisl. Vivamus congue ac nisl sit amet vestibulum. Phasellus laoreet vehicula cursus. Sed sagittis est eget interdum rutrum. Etiam ac vehicula nibh. Nulla consequat justo eu erat varius tempor. Nullam enim est, varius sed neque nec, aliquet dictum leo. Sed finibus enim quis elit venenatis dictum. Donec feugiat eget lorem aliquet pulvinar. Donec rhoncus ante quis neque tincidunt lobortis. Nam sit amet gravida est. Donec turpis metus, bibendum et massa sed, lobortis facilisis risus. Praesent placerat fringilla erat et mattis. Vivamus et tincidunt nibh.
@@ -69,31 +108,10 @@ Nullam pretium vel lorem at ultrices. Vivamus mi sem, tristique sed elit non, he
 Praesent volutpat euismod augue, sodales mollis felis. Nulla aliquam purus id nisl molestie, vel eleifend libero porta. Integer gravida leo eu convallis congue. Curabitur neque ex, mollis vel porttitor condimentum, mollis non lacus. Donec est mi, rhoncus vel porttitor dapibus, gravida id ex. Vestibulum vitae tempor eros, eget tempor velit. Phasellus venenatis ex ac eros iaculis viverra. Quisque venenatis consectetur quam ut mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
 Duis non eros non purus faucibus finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus purus dolor, pharetra ac tellus nec, accumsan blandit sem. Mauris luctus sed magna at malesuada. Vivamus ut sem sed massa pulvinar ultricies. Morbi vulputate eu massa non aliquet. Vivamus scelerisque condimentum tortor sed vestibulum. Sed pretium lectus ut commodo finibus. Nunc viverra dictum nulla, et ornare enim dapibus sed.
-              </textarea>
-            </div>
-          </div>
-        </a>
+        </textarea>
+      </div>
+    </a>
+  </div>
 
-
-        <a name="obra4">
-          <div class="col-12" id="obra">
-            <div class="col-6" id="imagens" style="float: left;">
-              <img src="https://avatars.mds.yandex.net/i?id=93a602551a9cf15cf9be6da4308418c1-5859531-images-thumbs&n=13">
-            </div>
-
-            <div class="col-6" id="textoObra" style="float: left;">
-              <textarea id="texto" disabled="true">
-Suspendisse vestibulum neque arcu, ac pretium orci convallis eget. Mauris aliquet ipsum in ante varius imperdiet. Cras vitae urna in velit euismod posuere. Duis pellentesque ante vel turpis ultricies aliquam. Vestibulum aliquet dignissim tellus, quis dignissim mi molestie ac. Fusce efficitur bibendum enim vitae malesuada. In hac habitasse platea dictumst. Nunc imperdiet scelerisque erat in vulputate. Vivamus feugiat ex id leo rhoncus, eget scelerisque est elementum. Praesent eget sem in purus pharetra condimentum ut non orci.
-
-Integer eu viverra tortor, sit amet dapibus nisl. Vivamus congue ac nisl sit amet vestibulum. Phasellus laoreet vehicula cursus. Sed sagittis est eget interdum rutrum. Etiam ac vehicula nibh. Nulla consequat justo eu erat varius tempor. Nullam enim est, varius sed neque nec, aliquet dictum leo. Sed finibus enim quis elit venenatis dictum. Donec feugiat eget lorem aliquet pulvinar. Donec rhoncus ante quis neque tincidunt lobortis. Nam sit amet gravida est. Donec turpis metus, bibendum et massa sed, lobortis facilisis risus. Praesent placerat fringilla erat et mattis. Vivamus et tincidunt nibh.
-
-Nullam pretium vel lorem at ultrices. Vivamus mi sem, tristique sed elit non, hendrerit semper tellus. Donec et nibh sit amet turpis lobortis congue. Donec quis sapien mollis, fringilla nisl eget, gravida massa. Aliquam ut ultricies neque, eu tristique ex. Praesent facilisis congue nunc, quis ultrices nulla pulvinar vel. Mauris gravida odio vitae mauris dapibus molestie. Nam non leo fringilla, feugiat lacus sit amet, convallis dui. Suspendisse blandit mauris in mauris ullamcorper, ac venenatis eros lacinia.
-
-Praesent volutpat euismod augue, sodales mollis felis. Nulla aliquam purus id nisl molestie, vel eleifend libero porta. Integer gravida leo eu convallis congue. Curabitur neque ex, mollis vel porttitor condimentum, mollis non lacus. Donec est mi, rhoncus vel porttitor dapibus, gravida id ex. Vestibulum vitae tempor eros, eget tempor velit. Phasellus venenatis ex ac eros iaculis viverra. Quisque venenatis consectetur quam ut mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-
-Duis non eros non purus faucibus finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus purus dolor, pharetra ac tellus nec, accumsan blandit sem. Mauris luctus sed magna at malesuada. Vivamus ut sem sed massa pulvinar ultricies. Morbi vulputate eu massa non aliquet. Vivamus scelerisque condimentum tortor sed vestibulum. Sed pretium lectus ut commodo finibus. Nunc viverra dictum nulla, et ornare enim dapibus sed.
-              </textarea>
-            </div>
-          </div>
-        </a>  
-          {% endblock%}
+      
+  {% endblock%}
