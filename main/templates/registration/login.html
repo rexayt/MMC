@@ -3,24 +3,35 @@
 {% block nav %}{% endblock %}
 {% block carrossel%}{% endblock %}
 {% block titulo %}Login{% endblock %}
-{% block conteudo %}
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-<div class="row" style="width: 600px; height: 300px; background-color: blueviolet; box-shadow: 10px 10px 10px 10px #331723">
-    <form method="post">
-        {% csrf_token %}
-        <div class="col-6">
-            <a style="color: white;">{{  form.user }}</a>
-        </div>
-        
 
-        <div class="col-6">
-            <a style="color: white;">{{  form.password }}</a>
-        </div>
-        
-        <button type="submit" class="btn btn-success">Login</button>
+{% block conteudo %}
+<body style="overflow: hidden;"> 
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<div class="row" style="margin:auto; margin-top: 15%; width: 500px; height: 300px; background-color: rgba(137, 43, 226, 0); border-radius: 50px; box-shadow: 10px 10px 10px 10px #331723">
+    <div class="col-12" style="margin-top: 5%;">
+        <form method="post" style="width: 470px; height: 250px; ">
+            {% csrf_token %}
+            <div class="col-6" style="margin: auto;">
+                <label style="color: white;">Usuário</label><br>
+                <a>{{  form.username }}</a>
+            </div>
+            
+            <br>
+
+            <div class="col-6" style="margin: auto;">
+                <label style="color: white;">Senha</label><br>
+                <a>{{  form.password }}</a>
+            </div>
+            
+            <button type="submit" class="btn" style="width: 400px; margin: auto; margin-top: 10%; margin-left: 9%; background-color: rgb(58, 38, 38);">Login</button>
         </form>
+        <p style="color: white; margin-top: 40px; padding-left: 80px;">Ainda não possui uma conta?<a href="{% url 'sign_up' %}">Clique Aqui</a></p>
+    </div>
 </div>
-    
+</body>
+{% endblock %}
+
+{% block footer %}
 
 {% endblock %}
 
