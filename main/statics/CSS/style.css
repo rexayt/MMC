@@ -48,7 +48,7 @@
 }
 
 #imagens{
-    background-color: gray;
+    float: left;background-color: transparent;
     width: 500px;
     height: 300px;
     margin: 30px;
@@ -57,11 +57,10 @@
 
 .obra{
     margin-top: 100px;
-    margin-bottom: 50px;
-    border: 0.5px solid;
-    border-color: rgb(84, 84, 84);
-    box-shadow: 3px 3px 3px 3px , rgb(255, 0, 0);
-    display: inline-block
+  margin-bottom: 50px;
+  border: 0.5px solid;
+  border-color: rgba(255, 255, 255, 0);
+  display: inline-block;
 }
 
 #textoObra{

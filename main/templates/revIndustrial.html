@@ -10,8 +10,11 @@
 {% block img2 %} {% static 'media/revIndustrial/tremCarrossel.png' %} {% endblock %}
 {% block img3 %} {% static 'media/revIndustrial/petroleo.jpeg' %} {% endblock %}
 {% block img4 %} {% static 'media/revIndustrial/tecnologico.jpeg' %} {% endblock %}
+{% block bibliotecas %}
+<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+{% endblock %}
   {% block conteudo %}
-  <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+  
 
   <section class="resumo" style="text-align-last: center; width: 70%;margin: auto;">
     <h4>
@@ -23,17 +26,8 @@
     </h4>
   </section>
   
-  <div class="obra" style="margin-top: 100px;
-  margin-bottom: 50px;
-  border: 0.5px solid;
-  border-color: rgb(255, 255, 255);
-  display: inline-block;
-  margin-left: 19%;">
-      <div class="col-6" id="imagens" style="float: left;background-color: transparent;
-                                            width: 500px;
-                                            height: 300px;
-                                            margin: 30px;
-                                        ">
+  <div class="obra">
+      <div class="col-6" id="imagens">
         <img src="{% static 'media/revIndustrial/1fase_trem.jpg' %}" style="margin: auto; display: block; margin-top: 12%; height: 60%;">
       </div>
 
@@ -53,17 +47,8 @@ Duis non eros non purus faucibus finibus. Vestibulum ante ipsum primis in faucib
     </a>
   </div>
 
-  <div class="obra" style="margin-top: 100px;
-  margin-bottom: 50px;
-  border: 0.5px solid;
-  border-color: rgb(255, 255, 255);
-  display: inline-block;
-  margin-left: 19%;">
-      <div class="col-6" id="imagens" style="float: left;background-color: transparent;
-                                            width: 500px;
-                                            height: 300px;
-                                            margin: 30px;
-                                        ">
+  <div class="obra">
+      <div class="col-6" id="imagens">
         <img src="{% static 'media/revIndustrial/petroleo.jpeg' %}" style="margin-left: 5%; display: block; height: 100%;">
       </div>
 
@@ -83,17 +68,8 @@ Duis non eros non purus faucibus finibus. Vestibulum ante ipsum primis in faucib
     </a>
   </div>
 
-  <div class="obra" style="margin-top: 100px;
-  margin-bottom: 50px;
-  border: 0.5px solid;
-  border-color: rgb(255, 255, 255);
-  display: inline-block;
-  margin-left: 19%;">
-      <div class="col-6" id="imagens" style="float: left;background-color: transparent;
-                                            width: 500px;
-                                            height: 300px;
-                                            margin: 30px;
-                                        ">
+  <div class="obra">
+      <div class="col-6" id="imagens">
         <img src="{% static 'media/revIndustrial/tecnologico.jpeg' %}" style="margin-left: 5%; display: block; height: 100%;">
       </div>
 
