@@ -14,3 +14,6 @@ def revIndustrial(request):
 
 def santosDumont(request):
     return render(request, 'santosDumont.html')
+
+def ingressos(request):
+    return render(request, 'ingressos.html')
