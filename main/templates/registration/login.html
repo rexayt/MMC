@@ -5,13 +5,16 @@
 {% block titulo %}Login{% endblock %}
 {% block conteudo %}
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-<div class="row" style="width: 600px; height: 300px; background-color: blueviolet;">
+<div class="row" style="width: 600px; height: 300px; background-color: blueviolet; box-shadow: 10px 10px 10px 10px #331723">
     <form method="post">
         {% csrf_token %}
-        <a style="">{{  form.user }}</a>
+        <div class="col-6">
+            <a style="color: white;">{{  form.user }}</a>
+        </div>
+        
 
         <div class="col-6">
-            <a style="">{{  form.password }}</a>
+            <a style="color: white;">{{  form.password }}</a>
         </div>
         
         <button type="submit" class="btn btn-success">Login</button>
