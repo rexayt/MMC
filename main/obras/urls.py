@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .views import artemoderna, main,olimpiada,revIndustrial,santosDumont, ingressos
+from .views import artemoderna, main,olimpiada,revIndustrial,santosDumont, ingressos, login
 
 urlpatterns = [
     path('', main, name='main'),

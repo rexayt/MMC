@@ -17,3 +17,6 @@ def santosDumont(request):
 
 def ingressos(request):
     return render(request, 'ingressos.html')
+
+def login(request):
+    return render(request, 'registration/login.html')

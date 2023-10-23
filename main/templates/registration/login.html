@@ -1,15 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'main.html' %}
+{% load static %}
+{% block nav %}{% endblock %}
+{% block carrossel%}{% endblock %}
+{% block titulo %}Login{% endblock %}
+{% block conteudo %}
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<div class="row" style="width: 600px; height: 300px; background-color: blueviolet;">
     <form method="post">
         {% csrf_token %}
-        {{form}}
+        <a style="">{{  form.user }}</a>
+
+        <div class="col-6">
+            <a style="">{{  form.password }}</a>
+        </div>
+        
         <button type="submit" class="btn btn-success">Login</button>
         </form>
-</body>
-</html>
+</div>
+    
+
+{% endblock %}
+
+    
+
