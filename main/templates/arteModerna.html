@@ -1,19 +1,92 @@
 {% extends 'main.html' %}
 {% load static %}
-	{% block titulo %}Arte Moderna{% endblock %}
-        {% block subtitulo %}<h1 class="subtitulo">100 anos da Semana da Arte Moderna</h1>{% endblock %}
-        {% block carrosel-titulo1 %}Abaporu{% endblock %}
-        {% block carrosel-titulo2 %}Operários{% endblock %}
-        {% block carrosel-titulo3 %}Amigos{% endblock %}
-        {% block carrosel-titulo4 %}O Homem amarelo{% endblock %}
-        {% block img1 %} {% static 'media/artemoderna/tarsilao.jpg' %} {% endblock %}
-        {% block img2 %} {% static 'media/artemoderna/operarios.jpg' %} {% endblock %}
-        {% block img3 %} {% static 'media/artemoderna/amigos.jpg' %} {% endblock %}
-        {% block img4 %} {% static 'media/artemoderna/o_homem_amarelo.jpeg' %} {% endblock %}
-        {% block conteudo %}
-        
-        {% endblock %}
+{% block titulo %}Arte Moderna{% endblock %}
+{% block subtitulo %}<h1 class="subtitulo">100 anos da Semana da Arte Moderna</h1>{% endblock %}
+{% block carrosel-titulo1 %}Abaporu{% endblock %}
+{% block carrosel-titulo2 %}<span style="color: rgb(186, 140, 48);">Operários</span>{% endblock %}
+{% block carrosel-titulo3 %}<span style="color: rgb(121, 14, 0);">Amigos</span>{% endblock %}
+{% block carrosel-titulo4 %}<span style="color: rgb(255, 64, 0);">O Homem amarelo</span>{% endblock %}
+{% block img1 %} {% static 'media/artemoderna/tarsilao.jpg' %} {% endblock %}
+{% block img2 %} {% static 'media/artemoderna/operarios.jpg' %} {% endblock %}
+{% block img3 %} {% static 'media/artemoderna/amigos.jpg' %} {% endblock %}
+{% block img4 %} {% static 'media/artemoderna/o_homem_amarelo.jpeg' %} {% endblock %}
+{% block bibliotecas %}
+<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+{% endblock %}
+  {% block conteudo %}
+  
 
-          <h3>100 anos da Semana da Arte Moderna</h3>
-          <br><br>
+  <section class="resumo" style="text-align-last: center; width: 70%;margin: auto;">
+    <h4>
+      A Semana da Arte Moderna é um evento cultural que ocorre anualmente em Lisboa e no Porto, com a participação
+      A Semana da Arte Moderna é um evento que ocorre todos os anos no mês de outubro e tem como objet
+      ivo divulgar a arte moderna em geral e promover a participação do público na cultura artística.
+      (texto TESTE)
+    </h4>
+  </section>
+  
+  <div class="obra">
+      <div class="col-6" id="imagens">
+        <img src="{% static 'media/revIndustrial/1fase_trem.jpg' %}" style="margin: auto; display: block; margin-top: 12%; height: 60%;">
+      </div>
 
+      <div class="col-6" id="textoObra" style="float: left;">
+        <textarea id="texto" disabled="true" style="background-color: transparent; margin: 10px; width: 560px; height: 320px;resize: none; border: none; color: white;">
+Suspendisse vestibulum neque arcu, ac pretium orci convallis eget. Mauris aliquet ipsum in ante varius imperdiet. Cras vitae urna in velit euismod posuere. Duis pellentesque ante vel turpis ultricies aliquam. Vestibulum aliquet dignissim tellus, quis dignissim mi molestie ac. Fusce efficitur bibendum enim vitae malesuada. In hac habitasse platea dictumst. Nunc imperdiet scelerisque erat in vulputate. Vivamus feugiat ex id leo rhoncus, eget scelerisque est elementum. Praesent eget sem in purus pharetra condimentum ut non orci.
+
+Integer eu viverra tortor, sit amet dapibus nisl. Vivamus congue ac nisl sit amet vestibulum. Phasellus laoreet vehicula cursus. Sed sagittis est eget interdum rutrum. Etiam ac vehicula nibh. Nulla consequat justo eu erat varius tempor. Nullam enim est, varius sed neque nec, aliquet dictum leo. Sed finibus enim quis elit venenatis dictum. Donec feugiat eget lorem aliquet pulvinar. Donec rhoncus ante quis neque tincidunt lobortis. Nam sit amet gravida est. Donec turpis metus, bibendum et massa sed, lobortis facilisis risus. Praesent placerat fringilla erat et mattis. Vivamus et tincidunt nibh.
+
+Nullam pretium vel lorem at ultrices. Vivamus mi sem, tristique sed elit non, hendrerit semper tellus. Donec et nibh sit amet turpis lobortis congue. Donec quis sapien mollis, fringilla nisl eget, gravida massa. Aliquam ut ultricies neque, eu tristique ex. Praesent facilisis congue nunc, quis ultrices nulla pulvinar vel. Mauris gravida odio vitae mauris dapibus molestie. Nam non leo fringilla, feugiat lacus sit amet, convallis dui. Suspendisse blandit mauris in mauris ullamcorper, ac venenatis eros lacinia.
+
+Praesent volutpat euismod augue, sodales mollis felis. Nulla aliquam purus id nisl molestie, vel eleifend libero porta. Integer gravida leo eu convallis congue. Curabitur neque ex, mollis vel porttitor condimentum, mollis non lacus. Donec est mi, rhoncus vel porttitor dapibus, gravida id ex. Vestibulum vitae tempor eros, eget tempor velit. Phasellus venenatis ex ac eros iaculis viverra. Quisque venenatis consectetur quam ut mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+Duis non eros non purus faucibus finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus purus dolor, pharetra ac tellus nec, accumsan blandit sem. Mauris luctus sed magna at malesuada. Vivamus ut sem sed massa pulvinar ultricies. Morbi vulputate eu massa non aliquet. Vivamus scelerisque condimentum tortor sed vestibulum. Sed pretium lectus ut commodo finibus. Nunc viverra dictum nulla, et ornare enim dapibus sed.
+        </textarea>
+      </div>
+    </a>
+  </div>
+
+  <div class="obra">
+      <div class="col-6" id="imagens">
+        <img src="{% static 'media/revIndustrial/petroleo.jpeg' %}" style="margin-left: 5%; display: block; height: 100%;">
+      </div>
+
+      <div class="col-6" id="textoObra" style="float: left;">
+        <textarea id="texto" disabled="true" style="background-color: transparent; margin: 10px; width: 560px; height: 320px;resize: none; border: none; color: white;">
+Suspendisse vestibulum neque arcu, ac pretium orci convallis eget. Mauris aliquet ipsum in ante varius imperdiet. Cras vitae urna in velit euismod posuere. Duis pellentesque ante vel turpis ultricies aliquam. Vestibulum aliquet dignissim tellus, quis dignissim mi molestie ac. Fusce efficitur bibendum enim vitae malesuada. In hac habitasse platea dictumst. Nunc imperdiet scelerisque erat in vulputate. Vivamus feugiat ex id leo rhoncus, eget scelerisque est elementum. Praesent eget sem in purus pharetra condimentum ut non orci.
+
+Integer eu viverra tortor, sit amet dapibus nisl. Vivamus congue ac nisl sit amet vestibulum. Phasellus laoreet vehicula cursus. Sed sagittis est eget interdum rutrum. Etiam ac vehicula nibh. Nulla consequat justo eu erat varius tempor. Nullam enim est, varius sed neque nec, aliquet dictum leo. Sed finibus enim quis elit venenatis dictum. Donec feugiat eget lorem aliquet pulvinar. Donec rhoncus ante quis neque tincidunt lobortis. Nam sit amet gravida est. Donec turpis metus, bibendum et massa sed, lobortis facilisis risus. Praesent placerat fringilla erat et mattis. Vivamus et tincidunt nibh.
+
+Nullam pretium vel lorem at ultrices. Vivamus mi sem, tristique sed elit non, hendrerit semper tellus. Donec et nibh sit amet turpis lobortis congue. Donec quis sapien mollis, fringilla nisl eget, gravida massa. Aliquam ut ultricies neque, eu tristique ex. Praesent facilisis congue nunc, quis ultrices nulla pulvinar vel. Mauris gravida odio vitae mauris dapibus molestie. Nam non leo fringilla, feugiat lacus sit amet, convallis dui. Suspendisse blandit mauris in mauris ullamcorper, ac venenatis eros lacinia.
+
+Praesent volutpat euismod augue, sodales mollis felis. Nulla aliquam purus id nisl molestie, vel eleifend libero porta. Integer gravida leo eu convallis congue. Curabitur neque ex, mollis vel porttitor condimentum, mollis non lacus. Donec est mi, rhoncus vel porttitor dapibus, gravida id ex. Vestibulum vitae tempor eros, eget tempor velit. Phasellus venenatis ex ac eros iaculis viverra. Quisque venenatis consectetur quam ut mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+Duis non eros non purus faucibus finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus purus dolor, pharetra ac tellus nec, accumsan blandit sem. Mauris luctus sed magna at malesuada. Vivamus ut sem sed massa pulvinar ultricies. Morbi vulputate eu massa non aliquet. Vivamus scelerisque condimentum tortor sed vestibulum. Sed pretium lectus ut commodo finibus. Nunc viverra dictum nulla, et ornare enim dapibus sed.
+        </textarea>
+      </div>
+    </a>
+  </div>
+
+  <div class="obra">
+      <div class="col-6" id="imagens">
+        <img src="{% static 'media/revIndustrial/tecnologico.jpeg' %}" style="margin-left: 5%; display: block; height: 100%;">
+      </div>
+
+      <div class="col-6" id="textoObra" style="float: left;">
+        <textarea id="texto" disabled="true" style="background-color: transparent; margin: 10px; width: 560px; height: 320px;resize: none; border: none; color: white;">
+Suspendisse vestibulum neque arcu, ac pretium orci convallis eget. Mauris aliquet ipsum in ante varius imperdiet. Cras vitae urna in velit euismod posuere. Duis pellentesque ante vel turpis ultricies aliquam. Vestibulum aliquet dignissim tellus, quis dignissim mi molestie ac. Fusce efficitur bibendum enim vitae malesuada. In hac habitasse platea dictumst. Nunc imperdiet scelerisque erat in vulputate. Vivamus feugiat ex id leo rhoncus, eget scelerisque est elementum. Praesent eget sem in purus pharetra condimentum ut non orci.
+
+Integer eu viverra tortor, sit amet dapibus nisl. Vivamus congue ac nisl sit amet vestibulum. Phasellus laoreet vehicula cursus. Sed sagittis est eget interdum rutrum. Etiam ac vehicula nibh. Nulla consequat justo eu erat varius tempor. Nullam enim est, varius sed neque nec, aliquet dictum leo. Sed finibus enim quis elit venenatis dictum. Donec feugiat eget lorem aliquet pulvinar. Donec rhoncus ante quis neque tincidunt lobortis. Nam sit amet gravida est. Donec turpis metus, bibendum et massa sed, lobortis facilisis risus. Praesent placerat fringilla erat et mattis. Vivamus et tincidunt nibh.
+
+Nullam pretium vel lorem at ultrices. Vivamus mi sem, tristique sed elit non, hendrerit semper tellus. Donec et nibh sit amet turpis lobortis congue. Donec quis sapien mollis, fringilla nisl eget, gravida massa. Aliquam ut ultricies neque, eu tristique ex. Praesent facilisis congue nunc, quis ultrices nulla pulvinar vel. Mauris gravida odio vitae mauris dapibus molestie. Nam non leo fringilla, feugiat lacus sit amet, convallis dui. Suspendisse blandit mauris in mauris ullamcorper, ac venenatis eros lacinia.
+
+Praesent volutpat euismod augue, sodales mollis felis. Nulla aliquam purus id nisl molestie, vel eleifend libero porta. Integer gravida leo eu convallis congue. Curabitur neque ex, mollis vel porttitor condimentum, mollis non lacus. Donec est mi, rhoncus vel porttitor dapibus, gravida id ex. Vestibulum vitae tempor eros, eget tempor velit. Phasellus venenatis ex ac eros iaculis viverra. Quisque venenatis consectetur quam ut mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+Duis non eros non purus faucibus finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus purus dolor, pharetra ac tellus nec, accumsan blandit sem. Mauris luctus sed magna at malesuada. Vivamus ut sem sed massa pulvinar ultricies. Morbi vulputate eu massa non aliquet. Vivamus scelerisque condimentum tortor sed vestibulum. Sed pretium lectus ut commodo finibus. Nunc viverra dictum nulla, et ornare enim dapibus sed.
+        </textarea>
+      </div>
+    </a>
+  </div>
+
+      
+  {% endblock%}
