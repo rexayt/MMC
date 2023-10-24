@@ -4,14 +4,40 @@
 {% block subtitulo %}<h1 class="subtitulo">Compra de Ingressos</h1>{% endblock %}
 {% block carrossel %}{% endblock %}
 {% block conteudo %}
-<div class="cardi" style="width: 600px; height: 300px; background-color: blueviolet; margin: auto; border-radius: 50px;box-shadow: 10px 10px 10px 10px #331723">
+<head>
+    <style>
+        .tab {
+            display: none;
+        }
+    </style>
+</head>
 
+<div class="cardi" style="width: 600px; height: 300px; background-color: transparent; margin: auto; border-radius: 50px;box-shadow: 10px 10px 10px 10px #331723">
+    <div class="tab-container">
+        <button class="tab-button" style="background-color: transparent; border-radius: 20px; margin-left: 30%;" onclick="openTab('tab1')">Museu Presencial</button>
+        <button class="tab-button" style="background-color: transparent;" onclick="openTab('tab2')">Museu Virtual</button>
+    
+        <div id="tab1" class="tab">
+            Conteúdo da Aba 1
+        </div>
+    
+        <div id="tab2" class="tab">
+            Conteúdo da Aba 2
+        </div>
+    </div>
 </div>
 
+<script>
+    function openTab(tabName) {
+        var tabs = document.getElementsByClassName("tab");
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+    }
+</script>
+
 <br><br><br><br>
-
-
-    
 
 
 {% endblock %}
