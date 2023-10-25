@@ -80,6 +80,39 @@
     </div>
 </div>
 
+{% block footer %}
+<div class="conteiner">
+    <footer class="footer fixed-bottom">
+      <div>
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Contato</h4>
+            <p class="bi bi-geo-alt">Rua tal tal, 123</p>
+            <p class="bi bi-telephone">(11)4002-8922</p>
+            <p class="bi bi-envelope-at">info@museudomeuwebsite.com</p>
+          </div>
+          <div class="col-md-4">
+            <h4><span class="bi bi-calendar"></span>Horário de Funcionamento<span class="bi bi-calendar"><span></h4>
+            <p>Segunda a Sexta: 9h às 17h</p>
+            <p>Sábado e Domingo: 10h às 18h</p>
+            <p>Fechado nos feriados</p>
+          </div>
+          <div class="col-md-4">
+            <h4>Redes Sociais</h4>
+            <ul class="list-unstyled">
+              <li><a href=""><i class="bi bi-facebook"></i> Facebook</a></li>
+              <li><a href=""><i class="bi bi-twitter"></i> Twitter</a></li>
+              <li><a href=""><i class="bi bi-instagram"></i> Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p><strong>Desenvolvido por: Felipe, Henri, Luiz, Thierry.</strong></p>
+      <p><strong>Copyright © 2023 MMC - Museu das Multiartes Conjuntas. Todos os direitos reservados.</strong></p>
+    </footer>     
+</div>
+{% endblock %}
+
 <script>
     function openTab(tabName) {
         var tabs = document.getElementsByClassName("tab");
