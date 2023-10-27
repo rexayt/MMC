@@ -48,10 +48,17 @@
 }
 
 #imagens{
-    margin: auto; 
+    float: left;
+    background-color: transparent;
+    width: 500px;
+    height: 300px;
+    margin: 30px;
+}
+
+#imagens #imagem{
+    margin: auto;
     display: block; 
     height: 100%;
-
 }
 
 .obra{
@@ -109,7 +116,7 @@ body {
     margin: auto; 
     margin-bottom: 3%; 
     padding: 2%;
-    box-shadow: 10px 10px 10px 10px #331723"
+    box-shadow: 10px 10px 10px 10px #331723
 }
 
 body {
@@ -135,6 +142,12 @@ body {
     margin-bottom: 40px;
     margin-top: 40px;
     text-align-last: center;
+}
+
+.btnEnviar{
+    margin-left: 43%;
+    margin-top: 2%;
+    border: #331723 ;
 }
 
 /* estilização da nav bar */
