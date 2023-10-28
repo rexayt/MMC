@@ -33,20 +33,28 @@
 <div class="cardi" style="width: 400px; height: 300px; background-color: transparent; margin: auto; border-radius: 50px;box-shadow: 10px 10px 10px 10px #331723">
     <div class="tab-container" style="padding-top: 5%;">
         <div class="botaoIngresso" >
-            <button class="tab-button" style="background-color: transparent; border-radius: 20px; margin-left: 12%;" onclick="openTab('tab1')"><span style="color: white;">Na Hora</span></button>
+            <button class="tab-button" style="background-color: transparent; border-radius: 20px; margin-left: 23%;" onclick="openTab('tab1')"><span style="color: white;">Na Hora</span></button>
             <button class="tab-button" style="background-color: transparent; border-radius: 20px;" onclick="openTab('tab2')"><span style="color: white;">Agendado</span></button>
         </div>
         
         <div id="tab1" class="tab" style="margin-left: 18%; margin-top: 6%;">
-            <div class="row" style="margin-bottom: 20%;">
-                <div style="margin-right: 20%;">
+            <div class="row" style="margin-bottom: 5%;">
+                <div style="margin-right: 40%; margin-left: 20%; margin-bottom: 2%;">
                     <label style="color: white;">Data:</label><br>
                     <input type="date">
                 </div>
                 
                 <div>
-                    <label style="color: white;" >Quantidade:</label><br>
-                    <input min="0" placeholder="0" type="number" id="quantidadeP" onchange="calcularTotalPresencial()" style="width: 80px;">
+                    <label style="color: white;" >Qtd Meias:</label><br>
+                    <input min="0" placeholder="0" type="number" id="quantidadeMnaHora" onchange="calcularTotalNaHoraMeia()" style="width: 80px;">
+                </div>
+                <div style="margin-left: 6%;">
+                    <label style="color: white;" >Qtd Inteiras:</label><br>
+                    <input min="0" placeholder="0" type="number" id="quantidadeInNaHora" onchange="calcularTotalNaHoraInteira()" style="width: 80px;">
+                </div>
+                <div style="margin-left: 6%;">
+                    <label style="color: white;" >Qtd Isentas:</label><br>
+                    <input min="0" placeholder="0" type="number" id="quantidadeIsNaHora" onchange="calcularTotalNaHoraIsenta()" style="width: 80px;">
                 </div>
             </div>
             
@@ -68,9 +76,17 @@
                 </div>
                 <br><br><br>
                 
-                <div style=" margin-left: 30%;">
-                    <label style="color: white;" >Quantidade:</label><br>
-                    <input min="0" placeholder="0" type="number" id="quantidadeV" onchange="calcularTotalVirtual()" style="width: 80px;">
+                <div>
+                    <label style="color: white;" >Qtd Meias:</label><br>
+                    <input min="0" placeholder="0" type="number" id="quantidadeMagendado" onchange="calcularTotalAgendadoMeia()" style="width: 80px;">
+                </div>
+                <div style="margin-left: 6%;">
+                    <label style="color: white;" >Qtd Inteiras:</label><br>
+                    <input min="0" placeholder="0" type="number" id="quantidadeInAgendado" onchange="calcularTotalAgendadoInteira()" style="width: 80px;">
+                </div>
+                <div style="margin-left: 6%;">
+                    <label style="color: white;" >Qtd Isentas:</label><br>
+                    <input min="0" placeholder="0" type="number" id="quantidadeIsAgendado" onchange="calcularTotalAgendadoIsenta()" style="width: 80px;">
                 </div>
             </div>
             
@@ -114,6 +130,11 @@
 {% endblock %}
 
 <script>
+    var naHoraMeia = 0;
+    var naHoraInteira = 0;
+    var naHoraIsenta = 0;
+    var totalNahora = 0
+
     function openTab(tabName) {
         var tabs = document.getElementsByClassName("tab");
         for (var i = 0; i < tabs.length; i++) {
@@ -122,27 +143,88 @@
         document.getElementById(tabName).style.display = "block";
     }
 
-    function calcularTotalPresencial() {
-        var quantidade = parseFloat(document.getElementById("quantidadeP").value);
+    function calcularTotalNaHoraMeia() {
+        var quantidadeNaHoraMeia = parseFloat(document.getElementById("quantidadeMnaHora").value);
+        
+        var precoPorUnidade = 10.00;
+
+        naHoraMeia = quantidade * precoPorUnidade;
+
+        calcularTotalNaHora()
+
+        // Atualize o elemento com o valor calculado
+        // document.getElementById("valorP").textContent = total.toFixed(2);
+    }
+
+    function calcularTotalNaHoraInteira() {
+        var quantidadeNaHoraInteira = parseFloat(document.getElementById("quantidadeInNaHora").value);
         
         var precoPorUnidade = 20.00;
 
-        var total = quantidade * precoPorUnidade;
+        naHoraInteira =+ quantidade * precoPorUnidade;
+
+        calcularTotalNaHora()
 
         // Atualize o elemento com o valor calculado
-        document.getElementById("valorP").textContent = total.toFixed(2);
+        // document.getElementById("valorP").textContent =+ total.toFixed(2);
     }
 
-    function calcularTotalVirtual() {
-        var quantidade = parseFloat(document.getElementById("quantidadeV").value);
+    function calcularTotalNaHoraIsenta() {
+        var quantidadeNaHoraIsenta = parseFloat(document.getElementById("quantidadeIsNaHora").value);
+        
+        var precoPorUnidade = 0.00;
+
+        naHoraIsenta =+ quantidade * precoPorUnidade;
+
+        calcularTotalNaHora()
+
+        // Atualize o elemento com o valor calculado
+        // document.getElementById("valorP").textContent =+ total.toFixed(2);
+    }
+
+    function calcularTotalNaHora(){
+        totalNahora = naHoraInteira + naHoraMeia + naHoraIsenta
+
+        document.getElementById("valorP").textContent =+ total.toFixed(2);
+    }
+
+    function calcularTotalAgendadoMeia() {
+        var quantidade = parseFloat(document.getElementById("quantidadeMagendado").value);
+        
+        var precoPorUnidade = 15.00;
+
+        var total =+ quantidade * precoPorUnidade;
+
+        // Atualize o elemento com o valor calculado
+        document.getElementById("valorV").textContent =+ total.toFixed(2);
+    }
+
+    function calcularTotalAgendadoInteira() {
+        var quantidade = parseFloat(document.getElementById("quantidadeInAgendado").value);
         
         var precoPorUnidade = 30.00;
 
-        var total = quantidade * precoPorUnidade;
+        var total =+ quantidade * precoPorUnidade;
 
         // Atualize o elemento com o valor calculado
         document.getElementById("valorV").textContent = total.toFixed(2);
     }
+
+    function calcularTotalAgendadoIsenta() {
+        var quantidade = parseFloat(document.getElementById("quantidadeIsAgendado").value);
+        
+        var precoPorUnidade = 0.00;
+
+        var total =+ quantidade * precoPorUnidade;
+
+        // Atualize o elemento com o valor calculado
+        document.getElementById("valorV").textContent = total.toFixed(2);
+    }
+
+    
+
+
+
 </script>
 
 <br><br><br><br>
