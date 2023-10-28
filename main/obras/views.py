@@ -22,5 +22,5 @@ def login(request):
     return render(request, 'registration/login.html')
 
 def sign_up(request):
-    print(request.POST.get('user') + ' ' + request.POST.get('email') + ' ' + request.POST.get('pass'))
+    print(f"{request.POST.get('user')} {request.POST.get('email')} {request.POST.get('pass')}")
     return render(request, 'registration/sign_up.html')
