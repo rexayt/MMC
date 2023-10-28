@@ -85,7 +85,7 @@
         <div class="carrossel-item_info">
           <div class="carrossel-item_container">
             <h1 class="carrossel-item_titulo" style="color: rgb(12, 148, 233); font-size: 2vw;">{% block carrosel-titulo1 %}Semana da Arte Moderna{% endblock %}</h1>
-            <p class="carrossel-item_description" style="font-size: 1.2vw;">{% block carrosel-descricao1 %}Nullam congue ornare rutrum. Nunc tincidunt, felis quis vulputate bibendum, ex purus consequat sem, fringilla bibendum eros lorem eget sem. Sed dictum quis mauris nec ultricies. Phasellus sit amet lorem dui. Fusce hendrerit placerat libero convallis dictum. Etiam augue enim, ultrices ac tellus non, tristique iaculis justo. Ut ac vestibulum ipsum.{% endblock %}</p>
+            <p class="carrossel-item_description" style="font-size: 1.2vw;">{% block carrosel-descricao1 %}Aconteceu em fevereiro de 1922, com o intuito de durar a semana completa do dia 11 a 18 de fevereiro. Quando na verdade só esteve aberta ao público durante os dias 13, 15 e 17,os trabalhos expostos na Semana de Arte não tiveram uma recepção positiva por parte dos intelectuais conservadores de São Paulo, pelo fato de romperem com as tradições artísticas do período. Isto é, obras com traços mais soltos. {% endblock %}</p>
             <a class="carrossel-item_btn" href="{% url 'artemoderna' %}">Explorar Tuor</a>
           </div>
         </div>
@@ -131,20 +131,26 @@
   <div class="conteudo">
     <div class="sobre" style="margin-bottom: 50px;">
       <h1 style="color: rgb(71, 0, 0);">Sobre</h1>
-      <!-- queria colocar uma linha para dividir o titulo do texto para ficar bonitin tipo essa linha de baixo-->
       <hr class="hr"/>
       <div>
-        <p>Vestibulum vulputate lorem vitae mi faucibus, non sollicitudin eros feugiat. Nam scelerisque, magna a vestibulum auctor, quam turpis pulvinar augue, sit amet eleifend justo tellus non elit. Morbi a tortor scelerisque ante sodales commodo. Morbi leo est, viverra vitae tempus ac, vestibulum quis sapien. Nunc eleifend diam nec diam vulputate volutpat. Duis tempus odio non eros mollis, id vulputate justo facilisis. Vivamus ornare risus non velit condimentum ultrices. Aliquam metus dui, commodo eu augue a, accumsan efficitur sem. Aenean a semper ligula. Curabitur nec venenatis dolor. Fusce et tincidunt sapien, id tempus purus. Cras rutrum ante nulla, et convallis erat varius sit amet. Pellentesque at quam ligula. Vestibulum suscipit nunc id odio aliquam, consequat iaculis felis euismod. Mauris vulputate tellus arcu, non consequat lacus tincidunt ac.</p>
+        <p>Somos uma empresa gerenciamento de um Museu Multitemático e
+          diante de um mundo cheio de transformações constantes, a preservação da história e da diversidade cultural é essencial para entender o passado, compreender o presente e enriquecer o  futuro. Com isso, os museus desempenham um papel fundamental na conservação, exposição e comunicação da herança cultural, fazendo uma ponte com o passado.<br> 
+          Decidimos criar ele justamente pelo nosso diferencial, para poder promover a compreensão e apreciação da diversidade cultural, científica e
+          histórica, enriquecendo a experiência educacional e cultural de nossos visitantes, ao mesmo tempo que
+          incentivamos o diálogo intercultural e a busca pelo conhecimento.
+          Com isso, o museu terá atualizações a cada 6(seis) meses em suas atrações, tendo assim 4 atrações por semestre, onde caso as avaliações de alguma atração esteja abaixo da média esperada, esta será substituída por outra antes da atualizações semestrais.<br>
+          Nosso Museu se encontra na Rua Bela Cintra, 1222, perto de uma estação de metrô e de frente para um ponto de ônibus para ajudar o máximo nosso público
+          </p>
       </div>
     </div>
 
-    <div class="Um Outro TOPICO do museu">
+    <!-- <div class="Um Outro TOPICO do museu">
       <h1 style="color: rgb(71, 0, 0);">Um Outro TOPICO do museu (se tiver)</h1>
       <hr class="hr"/>
       <div>
         <p>Vestibulum vulputate lorem vitae mi faucibus, non sollicitudin eros feugiat. Nam scelerisque, magna a vestibulum auctor, quam turpis pulvinar augue, sit amet eleifend justo tellus non elit. Morbi a tortor scelerisque ante sodales commodo. Morbi leo est, viverra vitae tempus ac, vestibulum quis sapien. Nunc eleifend diam nec diam vulputate volutpat. Duis tempus odio non eros mollis, id vulputate justo facilisis. Vivamus ornare risus non velit condimentum ultrices. Aliquam metus dui, commodo eu augue a, accumsan efficitur sem. Aenean a semper ligula. Curabitur nec venenatis dolor. Fusce et tincidunt sapien, id tempus purus. Cras rutrum ante nulla, et convallis erat varius sit amet. Pellentesque at quam ligula. Vestibulum suscipit nunc id odio aliquam, consequat iaculis felis euismod. Mauris vulputate tellus arcu, non consequat lacus tincidunt ac.</p>
       </div>
-    </div>
+    </div> -->
   </div>
   {% endblock %}
 
@@ -155,9 +161,9 @@
           <div class="row">
             <div class="col-md-4">
               <h4>Contato</h4>
-              <p class="bi bi-geo-alt">Rua tal tal, 123</p>
-              <p class="bi bi-telephone">(11)4002-8922</p>
-              <p class="bi bi-envelope-at">info@museudomeuwebsite.com</p>
+              <p class="bi bi-geo-alt">Rua Bela Cintra, 1222</p>
+              <p class="bi bi-telephone">(11) 4002-8922</p>
+              <p class="bi bi-envelope-at">contato@museumultitematico.com</p>
             </div>
             <div class="col-md-4">
               <h4><span class="bi bi-calendar"></span>Horário de Funcionamento<span class="bi bi-calendar"><span></h4>

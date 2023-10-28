@@ -46,15 +46,15 @@
                 
                 <div>
                     <label style="color: white;" >Qtd Meias:</label><br>
-                    <input min="0" placeholder="0" type="number" id="quantidadeMnaHora" onchange="calcularTotalNaHoraMeia()" style="width: 80px;">
+                    <input min="0" placeholder="0" type="number" id="quantidadeMnaHora" onchange="calcularTotalNaHora()" style="width: 80px;">
                 </div>
                 <div style="margin-left: 6%;">
                     <label style="color: white;" >Qtd Inteiras:</label><br>
-                    <input min="0" placeholder="0" type="number" id="quantidadeInNaHora" onchange="calcularTotalNaHoraInteira()" style="width: 80px;">
+                    <input min="0" placeholder="0" type="number" id="quantidadeInNaHora" onchange="calcularTotalNaHora()" style="width: 80px;">
                 </div>
                 <div style="margin-left: 6%;">
                     <label style="color: white;" >Qtd Isentas:</label><br>
-                    <input min="0" placeholder="0" type="number" id="quantidadeIsNaHora" onchange="calcularTotalNaHoraIsenta()" style="width: 80px;">
+                    <input min="0" placeholder="0" type="number" id="quantidadeIsNaHora" onchange="calcularTotalNaHora()" style="width: 80px;">
                 </div>
             </div>
             
@@ -130,10 +130,6 @@
 {% endblock %}
 
 <script>
-    var naHoraMeia = 0;
-    var naHoraInteira = 0;
-    var naHoraIsenta = 0;
-    var totalNahora = 0
 
     function openTab(tabName) {
         var tabs = document.getElementsByClassName("tab");
@@ -143,88 +139,22 @@
         document.getElementById(tabName).style.display = "block";
     }
 
-    function calcularTotalNaHoraMeia() {
+    function calcularTotalNaHora() {
         var quantidadeNaHoraMeia = parseFloat(document.getElementById("quantidadeMnaHora").value);
-        
-        var precoPorUnidade = 10.00;
+        var precoPorUnidadeMeiaNahora = 10.00;
+        var naHoraMeia = quantidadeNaHoraMeia * precoPorUnidadeMeiaNahora;
 
-        naHoraMeia = quantidade * precoPorUnidade;
+        var quantidadeNaHoraInteira = parseFloat(document.getElementById("quantidadeInNaHora").value);
+        var precoPorUnidadeInteiraNahora = 20.00;
+        var naHoraInteira = quantidadeNaHoraInteira * precoPorUnidadeInteiraNahora;
 
-        calcularTotalNaHora()
+        totalNahora = naHoraMeia + naHoraInteira
+
+        document.getElementById("valorP").textContent = totalNahora.toFixed(2);
 
         // Atualize o elemento com o valor calculado
         // document.getElementById("valorP").textContent = total.toFixed(2);
     }
-
-    function calcularTotalNaHoraInteira() {
-        var quantidadeNaHoraInteira = parseFloat(document.getElementById("quantidadeInNaHora").value);
-        
-        var precoPorUnidade = 20.00;
-
-        naHoraInteira =+ quantidade * precoPorUnidade;
-
-        calcularTotalNaHora()
-
-        // Atualize o elemento com o valor calculado
-        // document.getElementById("valorP").textContent =+ total.toFixed(2);
-    }
-
-    function calcularTotalNaHoraIsenta() {
-        var quantidadeNaHoraIsenta = parseFloat(document.getElementById("quantidadeIsNaHora").value);
-        
-        var precoPorUnidade = 0.00;
-
-        naHoraIsenta =+ quantidade * precoPorUnidade;
-
-        calcularTotalNaHora()
-
-        // Atualize o elemento com o valor calculado
-        // document.getElementById("valorP").textContent =+ total.toFixed(2);
-    }
-
-    function calcularTotalNaHora(){
-        totalNahora = naHoraInteira + naHoraMeia + naHoraIsenta
-
-        document.getElementById("valorP").textContent =+ total.toFixed(2);
-    }
-
-    function calcularTotalAgendadoMeia() {
-        var quantidade = parseFloat(document.getElementById("quantidadeMagendado").value);
-        
-        var precoPorUnidade = 15.00;
-
-        var total =+ quantidade * precoPorUnidade;
-
-        // Atualize o elemento com o valor calculado
-        document.getElementById("valorV").textContent =+ total.toFixed(2);
-    }
-
-    function calcularTotalAgendadoInteira() {
-        var quantidade = parseFloat(document.getElementById("quantidadeInAgendado").value);
-        
-        var precoPorUnidade = 30.00;
-
-        var total =+ quantidade * precoPorUnidade;
-
-        // Atualize o elemento com o valor calculado
-        document.getElementById("valorV").textContent = total.toFixed(2);
-    }
-
-    function calcularTotalAgendadoIsenta() {
-        var quantidade = parseFloat(document.getElementById("quantidadeIsAgendado").value);
-        
-        var precoPorUnidade = 0.00;
-
-        var total =+ quantidade * precoPorUnidade;
-
-        // Atualize o elemento com o valor calculado
-        document.getElementById("valorV").textContent = total.toFixed(2);
-    }
-
-    
-
-
-
 </script>
 
 <br><br><br><br>
